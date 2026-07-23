@@ -1,14 +1,20 @@
 import type { StudentStory } from './types'
 
+export const summerActivityOptions = [
+  'Internship or Academic Research',
+  'Summer Job',
+  'Medical Shadowing',
+  'Summer Classes',
+  'Volunteering',
+  'Travel or Study Abroad',
+  'Other',
+] as const
+
 export const seedStories: StudentStory[] = [
   {
     id: 'story-1',
-    name: 'Aisha K.',
-    classYear: 'Class of 2028',
-    major: 'Human & Organizational Development',
-    summerActivity: 'Supported a healthcare strategy project as a summer analyst intern',
+    summerActivity: 'Internship or Academic Research',
     organization: 'Deloitte',
-    roleType: 'Internship',
     story:
       'The biggest unlock wasn’t frameworks—it was learning to interview stakeholders with curiosity. Trying consulting as an experiment helped me learn what energizes me without locking into a forever identity.',
     photoUrl:
@@ -18,12 +24,8 @@ export const seedStories: StudentStory[] = [
   },
   {
     id: 'story-2',
-    name: 'Jordan M.',
-    classYear: 'Class of 2028',
-    major: 'Computer Science',
-    summerActivity: 'Built and shipped a small campus productivity app with two friends',
+    summerActivity: 'Internship or Academic Research',
     organization: 'Independent project',
-    roleType: 'Personal project',
     story:
       'Instead of waiting for the perfect internship, we built something students actually used. Having a demo on my phone made every career fair conversation concrete—and later helped me land a product internship.',
     photoUrl:
@@ -33,12 +35,8 @@ export const seedStories: StudentStory[] = [
   },
   {
     id: 'story-3',
-    name: 'Priya S.',
-    classYear: 'Class of 2029',
-    major: 'Medicine, Health & Society',
-    summerActivity: 'Shadowed clinicians and volunteered in a patient support program',
+    summerActivity: 'Medical Shadowing',
     organization: 'Vanderbilt University Medical Center',
-    roleType: 'Shadowing / clinical',
     story:
       'Consistent clinical exposure helped me stop guessing about medicine. Reflecting afterward with HPAO turned a vague interest into a timeline I can actually follow.',
     photoUrl:
@@ -47,14 +45,3 @@ export const seedStories: StudentStory[] = [
     createdAt: '2026-04-18T16:45:00.000Z',
   },
 ]
-
-export const roleTypes = [
-  'Internship',
-  'Research',
-  'Volunteer',
-  'Part-time job',
-  'Shadowing / clinical',
-  'Fellowship',
-  'Personal project',
-  'Other',
-] as const

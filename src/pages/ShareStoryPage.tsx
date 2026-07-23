@@ -2,7 +2,7 @@ import { useState, type FormEvent } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import { pathways } from '../data/pathways'
-import { roleTypes } from '../data/stories'
+import { summerActivityOptions } from '../data/stories'
 import { useStories } from '../hooks/useStories'
 
 export function ShareStoryPage() {
@@ -31,12 +31,8 @@ export function ShareStoryPage() {
     event.preventDefault()
     const data = new FormData(event.currentTarget)
     addStory({
-      name: String(data.get('name') || '').trim(),
-      classYear: String(data.get('classYear') || '').trim(),
-      major: String(data.get('major') || '').trim(),
-      summerActivity: String(data.get('summerActivity') || '').trim(),
+      summerActivity: String(data.get('summerActivity') || ''),
       organization: String(data.get('organization') || '').trim(),
-      roleType: String(data.get('roleType') || ''),
       story: String(data.get('story') || '').trim(),
       photoUrl:
         photoUrl ||
@@ -70,32 +66,17 @@ export function ShareStoryPage() {
       ) : (
         <form className="form" style={{ marginTop: 20 }} onSubmit={onSubmit}>
           <div className="field">
-            <label htmlFor="name">Preferred name</label>
-            <input id="name" name="name" required placeholder="Alex R." />
-          </div>
-          <div className="field">
-            <label htmlFor="classYear">Class year</label>
-            <input
-              id="classYear"
-              name="classYear"
-              required
-              placeholder="Class of 2029"
-            />
-          </div>
-          <div className="field">
-            <label htmlFor="major">Major or intended major</label>
-            <input id="major" name="major" required placeholder="Economics" />
-          </div>
-
-          <div className="field">
             <label htmlFor="summerActivity">What did you do this summer?</label>
-            <input
-              id="summerActivity"
-              name="summerActivity"
-              required
-              maxLength={160}
-              placeholder="e.g. Interned on a product marketing team"
-            />
+            <select id="summerActivity" name="summerActivity" required defaultValue="">
+              <option value="" disabled>
+                Select one
+              </option>
+              {summerActivityOptions.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
           </div>
           <div className="field">
             <label htmlFor="organization">Employer or organization</label>
@@ -106,19 +87,6 @@ export function ShareStoryPage() {
               maxLength={120}
               placeholder="e.g. Nashville Public Library, Google, VUMC"
             />
-          </div>
-          <div className="field">
-            <label htmlFor="roleType">Type of role</label>
-            <select id="roleType" name="roleType" required defaultValue="">
-              <option value="" disabled>
-                Select one
-              </option>
-              {roleTypes.map((type) => (
-                <option key={type} value={type}>
-                  {type}
-                </option>
-              ))}
-            </select>
           </div>
           <div className="field">
             <label htmlFor="pathwayId">Related pathway (optional)</label>

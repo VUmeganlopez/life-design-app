@@ -9,7 +9,7 @@ import {
 import { seedStories } from '../data/stories'
 import type { StudentStory } from '../data/types'
 
-const STORAGE_KEY = 'vandy-life-design-stories-v2'
+const STORAGE_KEY = 'vandy-life-design-stories-v4'
 
 function load(): StudentStory[] {
   try {

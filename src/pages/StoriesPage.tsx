@@ -36,16 +36,13 @@ export function StoriesPage() {
               />
               <div className="story-body">
                 <div className="meta-row" style={{ marginBottom: 8 }}>
-                  <span className="chip">{story.roleType}</span>
+                  <span className="chip">{story.summerActivity}</span>
                   <span className="chip-muted chip">{story.organization}</span>
                   {pathway ? (
                     <span className="chip-muted chip">{pathway.name}</span>
                   ) : null}
                 </div>
-                <h3>{story.summerActivity}</h3>
-                <p className="story-meta">
-                  {story.name} · {story.classYear} · {story.major}
-                </p>
+                <h3>{story.organization}</h3>
                 <p className="muted" style={{ margin: 0, fontSize: '0.92rem' }}>
                   {story.story}
                 </p>

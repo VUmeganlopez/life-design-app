@@ -49,12 +49,8 @@ export type Pathway = {
 
 export type StudentStory = {
   id: string
-  name: string
-  classYear: string
-  major: string
   summerActivity: string
   organization: string
-  roleType: string
   story: string
   photoUrl: string
   pathwayId?: string

@@ -4,7 +4,7 @@ import { BrandLockup } from '../components/BrandLockup'
 import { careerStats } from '../data/pathways'
 import { useProgress } from '../hooks/useProgress'
 
-const WELCOME_DWELL_MS = 2800
+const WELCOME_DWELL_MS = 3300
 
 export function IntroPage() {
   const navigate = useNavigate()

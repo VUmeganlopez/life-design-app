@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { BrandLockup } from '../components/BrandLockup'
 import { ProgressRing } from '../components/ProgressRing'
 import {
@@ -18,7 +18,9 @@ export function HomePage() {
     getPathwayTrack,
     canAccessIndustryPathways,
     lifeDesignProgress,
+    clearIntroSeen,
   } = useProgress()
+  const navigate = useNavigate()
   const selected = pathways.filter((p) =>
     progress.selectedPathways.includes(p.id),
   )
@@ -173,6 +175,29 @@ export function HomePage() {
           </div>
         ) : null}
       </div>
+
+      <button
+        type="button"
+        className="linkish"
+        style={{
+          marginTop: 28,
+          background: 'none',
+          border: 'none',
+          padding: 0,
+          cursor: 'pointer',
+          display: 'block',
+          width: '100%',
+          textAlign: 'center',
+          fontSize: '0.78rem',
+          opacity: 0.65,
+        }}
+        onClick={() => {
+          clearIntroSeen()
+          navigate('/')
+        }}
+      >
+        Replay welcome
+      </button>
     </main>
   )
 }

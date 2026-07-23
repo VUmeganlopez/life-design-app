@@ -14,7 +14,7 @@ import {
 } from '../data/pathways'
 import type { GoalTrack, ProgressState } from '../data/types'
 
-const STORAGE_KEY = 'vandy-life-design-progress-v4'
+const STORAGE_KEY = 'vandy-life-design-progress-v5'
 
 const defaultState: ProgressState = {
   completedSteps: {},
@@ -54,6 +54,7 @@ function save(state: ProgressState) {
 type ProgressContextValue = {
   progress: ProgressState
   markIntroSeen: () => void
+  clearIntroSeen: () => void
   toggleStep: (stepId: string) => void
   isComplete: (stepId: string) => boolean
   togglePathway: (pathwayId: string) => void
@@ -87,6 +88,10 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
 
   const markIntroSeen = useCallback(() => {
     update((p) => ({ ...p, introSeen: true }))
+  }, [update])
+
+  const clearIntroSeen = useCallback(() => {
+    update((p) => ({ ...p, introSeen: false }))
   }, [update])
 
   const toggleStep = useCallback(
@@ -164,6 +169,7 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
     () => ({
       progress,
       markIntroSeen,
+      clearIntroSeen,
       toggleStep,
       isComplete,
       togglePathway,
@@ -177,6 +183,7 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
     [
       progress,
       markIntroSeen,
+      clearIntroSeen,
       toggleStep,
       isComplete,
       togglePathway,
