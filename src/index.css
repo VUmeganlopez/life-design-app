@@ -124,6 +124,27 @@ img {
   animation: rise 420ms ease both;
 }
 
+.intro-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: auto;
+  padding: 28px 0 8px;
+}
+
+.intro-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.28);
+  transition: background 240ms ease, transform 240ms ease;
+}
+
+.intro-dot.active {
+  background: var(--vu-gold-light);
+  transform: scale(1.15);
+}
+
 @keyframes rise {
   from {
     opacity: 0;

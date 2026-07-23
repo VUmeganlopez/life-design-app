@@ -1,13 +1,21 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { BrandLockup } from '../components/BrandLockup'
 import { careerStats } from '../data/pathways'
 import { useProgress } from '../hooks/useProgress'
 
+const WELCOME_DWELL_MS = 2800
+
 export function IntroPage() {
   const navigate = useNavigate()
   const { markIntroSeen } = useProgress()
   const [step, setStep] = useState<1 | 2>(1)
+
+  useEffect(() => {
+    if (step !== 1) return
+    const timer = window.setTimeout(() => setStep(2), WELCOME_DWELL_MS)
+    return () => window.clearTimeout(timer)
+  }, [step])
 
   const start = () => {
     markIntroSeen()
@@ -39,15 +47,9 @@ export function IntroPage() {
           >
             Build a career with meaning—starting now.
           </p>
-
-          <div style={{ marginTop: 'auto', paddingTop: 48 }}>
-            <button
-              type="button"
-              className="btn btn-primary btn-block"
-              onClick={() => setStep(2)}
-            >
-              Continue
-            </button>
+          <div className="intro-dots" aria-hidden>
+            <span className="intro-dot active" />
+            <span className="intro-dot" />
           </div>
         </div>
       ) : (
@@ -83,16 +85,13 @@ export function IntroPage() {
             ))}
           </div>
 
+          <div className="intro-dots" aria-hidden>
+            <span className="intro-dot" />
+            <span className="intro-dot active" />
+          </div>
+
           <button type="button" className="btn btn-primary btn-block" onClick={start}>
             Begin your journey
-          </button>
-          <button
-            type="button"
-            className="btn btn-ghost btn-block"
-            style={{ marginTop: 10 }}
-            onClick={() => setStep(1)}
-          >
-            Back
           </button>
         </div>
       )}
