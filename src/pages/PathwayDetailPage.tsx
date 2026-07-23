@@ -48,7 +48,7 @@ export function PathwayDetailPage() {
             {pathway.name}
           </h1>
           <p className="muted">
-            Complete at least {unlockPct}% of First-Year Life Design (
+            Complete at least {unlockPct}% of Life Design Foundations (
             {lifeDesignProgress.unlockCount}/{lifeDesignProgress.total}{' '}
             milestones) to open industry pathways. You’re at{' '}
             {lifeDesignProgress.completed}/{lifeDesignProgress.total}.

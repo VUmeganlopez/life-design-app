@@ -40,7 +40,7 @@ export const seedStories: StudentStory[] = [
     organization: 'Vanderbilt University Medical Center',
     roleType: 'Shadowing / clinical',
     story:
-      'Consistent clinical exposure helped me stop guessing about medicine. Reflecting afterward with HPAO turned a vague interest into a timeline I can actually follow as a first-year.',
+      'Consistent clinical exposure helped me stop guessing about medicine. Reflecting afterward with HPAO turned a vague interest into a timeline I can actually follow.',
     photoUrl:
       'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80',
     pathwayId: 'healthcare',

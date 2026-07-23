@@ -58,7 +58,7 @@ export function ShareStoryPage() {
         What did you do this summer?
       </h1>
       <p className="muted" style={{ marginTop: 8 }}>
-        Tell fellow first-years about a summer experience—and add a photo if you
+        Tell fellow Commodores about a summer experience—and add a photo if you
         have one.
       </p>
 
@@ -138,7 +138,7 @@ export function ShareStoryPage() {
               name="story"
               required
               maxLength={800}
-              placeholder="What did you learn? What would you tell another first-year?"
+              placeholder="What did you learn? What would you tell another student?"
             />
           </div>
           <div className="field">

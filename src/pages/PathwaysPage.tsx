@@ -28,7 +28,7 @@ export function PathwaysPage() {
         Start with Life Design
       </h1>
       <p className="muted" style={{ marginTop: 8 }}>
-        First-Year Life Design is available from day one. Industry pathways
+        Life Design Foundations is available from day one. Industry pathways
         unlock at {unlockPct}% of those milestones (
         {lifeDesignProgress.unlockCount}/{lifeDesignProgress.total}). For each
         industry path, choose <strong>employment</strong> or{' '}

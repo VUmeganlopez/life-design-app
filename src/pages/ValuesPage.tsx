@@ -63,7 +63,7 @@ export function ValuesPage() {
           <strong>Start ranking</strong>
           <span className="muted" style={{ fontSize: '0.92rem' }}>
             Pick a few values below. You don’t need all twelve—focus on what
-            resonates as a first-year.
+            resonates for you right now.
           </span>
         </div>
       )}

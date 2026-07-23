@@ -39,12 +39,12 @@ export function JourneyPage() {
 
   return (
     <main className="page">
-      <p className="eyebrow">First-year milestones</p>
+      <p className="eyebrow">Milestone tracker</p>
       <h1 className="display" style={{ fontSize: '1.85rem' }}>
         Your life design journey
       </h1>
       <p className="muted" style={{ marginTop: 8 }}>
-        First-years start with Life Design. Industry pathways unlock at{' '}
+        Start with Life Design Foundations. Industry pathways unlock at{' '}
         {unlockPct}% ({lifeDesignProgress.unlockCount}/
         {lifeDesignProgress.total} milestones)
         {canAccessIndustryPathways

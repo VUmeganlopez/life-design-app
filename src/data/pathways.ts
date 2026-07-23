@@ -416,10 +416,10 @@ export const CAREER_PATHWAY_UNLOCK_RATIO = 0.5
 
 const lifeDesignPathway: Pathway = {
   id: LIFE_DESIGN_ID,
-  name: 'First-Year Life Design',
+  name: 'Life Design Foundations',
   tagline: 'Know yourself before you specialize',
   description:
-    'Foundation milestones for every first-year—values, exploration, and early career habits. Complete about half to unlock industry pathways.',
+    'Foundation milestones—values, exploration, and early career habits. Complete about half to unlock industry pathways.',
   accent: '#CFAE70',
   kind: 'foundation',
   steps: [
@@ -429,7 +429,7 @@ const lifeDesignPathway: Pathway = {
       title: 'Complete a values & interests check-in',
       description:
         'Clarify what energizes you, what you value, and whether you’re curious about jobs, more school, or both.',
-      suggestedTiming: 'Weeks 1–3 of your first semester',
+      suggestedTiming: 'Weeks 1–3 after you start',
       classYears: ['First-Year', 'Sophomore'],
       whyItMatters:
         'Self-knowledge is the compass for every pathway that comes next.',
@@ -448,7 +448,7 @@ const lifeDesignPathway: Pathway = {
       title: 'Draft three life design “odyssey” plans',
       description:
         'Sketch three plausible futures—including one wild-card. Compare energy, risk, and whether each path leans employment or continuing education.',
-      suggestedTiming: 'By midterms of your first year',
+      suggestedTiming: 'Early in your pathway',
       classYears: ['First-Year', 'Sophomore'],
       whyItMatters:
         'Multiple futures reduce pressure to pick forever and surface transferable skills.',
@@ -490,7 +490,7 @@ const lifeDesignPathway: Pathway = {
         'A reviewed resume is the baseline for Handshake, referrals, and early apps.',
       resources: [
         {
-          label: 'Resume Coach · First-Year Life Design',
+          label: 'Resume Coach · Life Design Foundations',
           href: `/resume-coach/${LIFE_DESIGN_ID}`,
           type: 'tool',
         },
@@ -583,11 +583,6 @@ export const careerStats = [
     value: '$85K',
     label: 'Median starting income',
     detail: 'Full-time U.S. employment',
-  },
-  {
-    value: '97%',
-    label: 'Knowledge rate',
-    detail: 'Share of graduates with a known outcome',
   },
 ] as const
 

@@ -36,13 +36,13 @@ export function HomePage() {
 
   return (
     <main className="page">
-      <BrandLockup subtitle="First-Year Journey" />
+      <BrandLockup subtitle="Life Design Journey" />
 
       <div className="progress-banner" style={{ marginTop: 20 }}>
         <ProgressRing completed={completedCount} total={total || 1} />
         <div>
           <p className="eyebrow" style={{ marginBottom: 4 }}>
-            First-year progress
+            Your progress
           </p>
           <h1 className="display" style={{ fontSize: '1.45rem', color: '#fff' }}>
             {completedCount} of {total} milestones
@@ -85,7 +85,7 @@ export function HomePage() {
         <div className="empty">
           You’re caught up for now.
           {canAccessIndustryPathways
-            ? ' Explore another pathway or share a first-year story with other Commodores.'
+            ? ' Explore another pathway or share a story with other Commodores.'
             : ' Keep checking off Life Design milestones to unlock industry pathways.'}
         </div>
       ) : (

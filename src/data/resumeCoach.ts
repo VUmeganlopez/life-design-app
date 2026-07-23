@@ -9,7 +9,7 @@ export type ResumeCoachProfile = {
 export const resumeCoachProfiles: Record<string, ResumeCoachProfile> = {
   'life-design': {
     pathwayId: 'life-design',
-    title: 'First-Year Life Design',
+    title: 'Life Design Foundations',
     focusAreas: [
       'Clear education + activities section',
       'Quantified impact where possible',
@@ -25,7 +25,7 @@ export const resumeCoachProfiles: Record<string, ResumeCoachProfile> = {
       'analysis',
     ],
     sampleOpener:
-      'Paste your resume below and I’ll grade it for a strong first-year / exploratory Commodore resume—clarity, impact, and readiness for early opportunities.',
+      'Paste your resume below and I’ll grade it for a strong exploratory Commodore resume—clarity, impact, and readiness for early opportunities.',
   },
   'finance-ib': {
     pathwayId: 'finance-ib',
